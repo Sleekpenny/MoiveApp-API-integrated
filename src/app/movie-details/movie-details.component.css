@@ -1,0 +1,15 @@
+.OpacityHover:hover{
+    opacity : 0.3;
+    transition: all 0.2ms
+}
+
+.textLenght{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 500px
+}
+
+.imgeProp{
+    border-radius: 50%;
+}

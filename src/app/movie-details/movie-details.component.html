@@ -1,0 +1,35 @@
+<div class="movieSearch mt-16 md:mt-32">
+    <div class="w-full  flex ">
+        <div class="md:w-52 w-full ml-4 md:ml-8 rounded">
+            <img src="https://image.tmdb.org/t/p/original/{{movieDetails.poster_path}}" alt="{{movieDetails.name}}"
+                class="max-w-52 max-h-64 oveflow-hidden object-contain effectProp rounded">
+        </div>
+    
+        <div class=" ml-4 ">
+            <p class="font-bold text-red-600 text-xl md:text-4xl md:mb-3 mb-1">{{movieDetails.original_title}}</p>
+            <p class="text-gray-200 text-xs md:text-lg md:w-3/5 p-2 md:p-0">{{movieDetails.overview}}</p>
+            <p class="rounded bg-red-600 px-3 w-fit text-white text-xs md:text-xl md:mt-4 mt-2  OpacityHover cursor-pointer">
+                <a href="https://www.themoviedb.org/video/play?key={{movieTrailer.key}}" target="_blank"> Watch Trailer </a> </p>               
+        </div>
+
+    </div>
+
+    <div class="MovieCast mt-8 md:ml-64">
+        <p class="font-bold text-white text-2xl p-4  md:p-0">Top Cast</p>
+        <div class="flex flex-wrap gap-3 p-2 md:p-0">
+            
+                <ng-container *ngFor="let cast of movieCast">
+                    <div class="flex mt-4" *ngIf="cast.profile_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{cast.profile_path}}" alt="{{cast.original_name}}" width="70">
+                    <div>
+                    <p class="font-bold text-sm md:text-lg text-white mt-2 ml-2">{{cast.original_name}}</p>
+                    <p class=" text-xs md:text-sm ml-2 text-white">{{cast.character}}</p>
+                    </div>
+                    </div>
+                </ng-container>
+               
+         
+        </div>
+    </div>
+   
+</div>

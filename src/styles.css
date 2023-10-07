@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height : 100%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    background-color: black ;
+    overflow-x : hidden
+}
+
+.fancyText {
+    background-image: linear-gradient(rgb(219, 49, 49), rgb(226, 28, 226));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s ease-in-out all;
+    font-weight: 700;
+}
+
+.fancyText:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(rgb(240, 140, 140), rgb(240, 125, 240));
+}
+
+
+.effectProp:hover{
+    transform: scale(1.15);
+    transition: all 0.2ms;
+    transition-delay: 0ms;
+    transition-duration: 0.5s;
+}

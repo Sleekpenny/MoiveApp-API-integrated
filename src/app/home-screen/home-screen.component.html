@@ -1,0 +1,102 @@
+<div class="">
+<div class="max-h-screen relative">
+    
+    <ngb-carousel [showNavigationArrows]="false" [interval]="3000">
+    <ng-template ngbSlide  *ngFor="let Banner of BannerResults" >
+
+    <div class="">
+        <img src="https://image.tmdb.org/t/p/original/{{Banner.backdrop_path}}" alt="{{Banner.original_title}}" class="overflow-hidden object-cover w-full max-h-screen">
+        <div class="absolute left-14 bottom-10 w-3/4 Responsive">
+            <p class="text-red-700 md:text-2xl font-bold ">{{Banner.title}}</p>
+            <p class="text-white md:text-lg text-xs ">{{Banner.overview}}</p>
+        </div>
+    </div>
+</ng-template >
+</ngb-carousel> 
+
+</div>
+
+<div class="TrendWrapper p-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Trending Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let trends of TrendingResult">
+            <img src="https://image.tmdb.org/t/p/original/{{trends.poster_path}}" alt="{{trends.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', trends.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Action Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let action of actionMovies">
+            <img src="https://image.tmdb.org/t/p/original/{{action.poster_path}}" alt="{{action.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', action.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Adventure Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let adventure of adventuresmovies">
+            <img src="https://image.tmdb.org/t/p/original/{{adventure.poster_path}}" alt="{{adventure.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', adventure.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Animation Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let animation of   aminationsMovies">
+            <img src="https://image.tmdb.org/t/p/original/{{animation.poster_path}}" alt="{{animation.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', animation.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Comedy Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let comedy of   comedymovies">
+            <img src="https://image.tmdb.org/t/p/original/{{comedy.poster_path}}" alt="{{comedy.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', comedy.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Documentary Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let doc of  documentaryMoives">
+            <img src="https://image.tmdb.org/t/p/original/{{doc.poster_path}}" alt="{{doc.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', doc.id]">
+        </ng-container>
+    </div>
+
+</div>
+
+<div class="TrendWrapper p-4 mt-4">
+    <div class="text-sm md:text-lg text-white  mb-2">Thriller Movies</div>
+
+    <div class="cursor-pointer flex overflow-x-scroll scrollHide">
+        <ng-container *ngFor="let th of  thriller">
+            <img src="https://image.tmdb.org/t/p/original/{{th.poster_path}}" alt="{{th.original_title}}"
+                class="max-h-36 md:max-h-52 object-contain box-content effectProp ml-2" [routerLink]="['movie', th.id]">
+        </ng-container>
+    </div>
+
+</div>
+</div>

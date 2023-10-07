@@ -1,0 +1,26 @@
+.large{
+    max-height: 200px;
+}
+
+.scrollHide::-webkit-scrollbar{
+    display:none
+}
+
+.effectProp:hover{
+    transform: scale(1.15);
+    transition: all 0.2ms;
+    transition-delay: 0ms;
+    transition-duration: 0.5s;
+}
+
+.effectProp:active{
+    transform:translateY(-3px)
+}
+
+@media screen and (min-width: 768px) and (max-width: 2500px) {
+    .Responsive{
+        left: 25rem;
+        bottom: 2rem;
+        width: 50%
+    }
+}

@@ -1,0 +1,25 @@
+<div class="searchContainer mt-14">
+    <form #form="ngForm" (submit)="OnSubmit(form)" class="flex gap-4 justify-center mt-4">
+        <input type="text" placeholder="search your favourite movies here..." name="SearchMoives" ngModel class=" p-1 px-4  bg-slate-200 rounded w-2/5 outline-none text-xs md:text-lg">
+        <button class="fancyText rounded text-xs md:text-lg">search</button>
+    </form>
+
+    <div class="SearchResults">
+        <div class="flex flex-wrap items-center justify-center gap-8   ">
+    
+            <ng-container *ngFor="let search of searchMoviesResult">
+                <div class=" w-40 h-24 md:w-80 md:h-44 flex p-2 px-2 mt-4" *ngIf="search.backdrop_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{search.poster_path}}" alt=""
+                        class="md:w-32 md:h-36  w-16 h-18 rounded cursor-pointer effectProp"
+                        [routerLink]="['/movie', search.id]">
+                    <div class="ml-4 overflow-hidden">
+                        <p class=" text-red-700 font-bold text-xs md:text-xl">{{search.original_title}}</p>
+                        <p class="text-white text-xs md:text-sm  textLenght">{{search.overview}}</p>
+                    </div>
+                </div>
+            </ng-container>
+    
+        </div>
+    
+    </div>
+</div>

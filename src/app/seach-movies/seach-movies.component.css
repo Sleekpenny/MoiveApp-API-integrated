@@ -1,0 +1,10 @@
+.scaling:hover{
+    transform:scale(1.15)
+}
+
+.textLenght{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    max-width: 120px
+}
